@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Masukkan Nomor HP - GoRide</title>
+    <link rel="stylesheet" href="Style.css" />
+    <style>
+      .phone-page{max-width:520px;margin:80px auto;background:#fff;padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+      .phone-page h2{color:#111}
+      .phone-page input{width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #ddd}
+      .phone-page button{margin-top:12px;background:#00C853;color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+    </style>
+  </head>
+  <body>
+    <div class="phone-page">
+      <h2>Masukkan Nomor HP Anda</h2>
+      <p>Gunakan nomor yang terdaftar pada akun Gojek Anda.</p>
+      <input id="phone" type="tel" inputmode="tel" placeholder="Contoh: 081234567890" />
+      <div style="text-align:right">
+        <button id="save">Simpan & Lanjutkan</button>
+      </div>
+    </div>
+
+    <script>
+      function validatePhone(num){
+        if(!num) return false;
+        const cleaned = num.replace(/\s|-/g,'');
+        return /^(?:\+62|62|0)8[1-9][0-9]{6,11}$/.test(cleaned);
+      }
+      document.getElementById('save').addEventListener('click', function(){
+        const val = document.getElementById('phone').value.trim();
+        if(!validatePhone(val)){
+          alert('Nomor tidak valid. Gunakan format 08xxxxxxxxxx atau +628xxxxxxxx');
+          return;
+        }
+        localStorage.setItem('gr_phone', val);
+        // redirect to main page
+        window.location.href = 'GoRide.html';
+      });
+
+      // allow enter
+      document.getElementById('phone').addEventListener('keypress', function(e){ if(e.key==='Enter') document.getElementById('save').click(); });
+    </script>
+  </body>
+</html>

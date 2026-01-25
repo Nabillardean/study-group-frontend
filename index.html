@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Selamat Datang - GoRide</title>
+    <link rel="stylesheet" href="Style.css" />
+    <style>
+      .welcome {
+        max-width:700px; margin:120px auto; background:#fff; padding:40px; border-radius:16px; text-align:center; box-shadow:0 8px 30px rgba(0,0,0,0.08)
+      }
+      .welcome h1{color:#00C853}
+      .welcome p{color:#555; margin:20px 0}
+      .welcome button{background:#00C853;color:#fff;border:none;padding:12px 20px;border-radius:10px;cursor:pointer}
+    </style>
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>Selamat Datang di laman resmi GoRide</h1>
+      <p>Selamat datang! Klik tombol di bawah untuk melanjutkan dan masukkan nomor HP Anda.</p>
+      <button id="start">Lanjutkan</button>
+    </div>
+
+    <script>
+      document.getElementById('start').addEventListener('click', function(){
+        // small transition effect via timeout then redirect to phone input page
+        document.querySelector('.welcome').style.opacity = '0.5';
+        setTimeout(function(){ window.location.href = 'phone.html'; }, 300);
+      });
+    </script>
+  </body>
+</html>
