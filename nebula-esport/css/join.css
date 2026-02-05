@@ -1,0 +1,49 @@
+body {
+  background: #0b0b0b;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.join-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.join-page h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.join-page p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.join-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.btn-back {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 26px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #fff;
+  color: #000;
+}

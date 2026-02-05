@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 10%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  border-bottom: 1px solid rgba(225, 6, 0, 0.3);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--red);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-menu li a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: var(--red);
+}
